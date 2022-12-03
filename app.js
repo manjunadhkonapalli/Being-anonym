@@ -118,7 +118,7 @@ passport.serializeUser(function(user, cb) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "/auth/google/secrets",
+    callbackURL: absoluteURI + "/auth/google/secrets",
     proxy: true,
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo" //since google+ is sunsetting, the routes willget adjusted through this route.
   },
